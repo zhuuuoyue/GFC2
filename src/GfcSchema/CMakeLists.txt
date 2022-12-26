@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 2.9)
 
-set(PROJECT_NAME GfcSchema)
+set(PROJECT_NAME GfcSchema31)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/../include 
@@ -13,4 +13,4 @@ aux_source_directory(. SRC_FILES)
 #编译选项
 add_compile_definitions(GFCSCHEMA_EXPORTS UNICODE)
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES} ${HEAD_FILES})
-target_link_libraries(${PROJECT_NAME} debug GfcCommond optimized GfcCommon)
+target_link_libraries(${PROJECT_NAME} debug GfcCommon31d optimized GfcCommon31)

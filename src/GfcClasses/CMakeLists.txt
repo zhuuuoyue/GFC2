@@ -1,23 +1,23 @@
 ﻿cmake_minimum_required(VERSION 2.9)
 
-set(PROJECT_NAME GfcClasses)
+set(PROJECT_NAME GfcClasses31)
 include_directories(
 	${PROJECT_SOURCE_DIR}/../include 
 	${PROJECT_SOURCE_DIR}/GfcEngine
 	${PROJECT_SOURCE_DIR}/GfcSchema
-	${PROJECT_SOURCE_DIR}/${PROJECT_NAME}
+	${PROJECT_SOURCE_DIR}/GfcClasses
 )
 
 file(GLOB HEAD_FILES "${PROJECT_SOURCE_DIR}/../include/GfcClasses/x3/*.h") 
 file(GLOB_RECURSE SRC_FILES  ${PROJECT_SOURCE_DIR}/${PROJECT_NAME} *.cpp *.h *.rc)
-source_group(TREE ${PROJECT_SOURCE_DIR}/${PROJECT_NAME} PREFIX "Source Files" FILES ${SRC_FILES})
+source_group(TREE ${PROJECT_SOURCE_DIR}/GfcClasses PREFIX "Source Files" FILES ${SRC_FILES})
 
 #set_source_files_properties(Gfc2.rc PROPERTIES LANGUAGE RC)
 
 link_directories(${PROJECT_SOURCE_DIR}/../lib)
 #编译选项
 add_compile_definitions(UNICODE GFCCLASSES_EXPORTS TIXML_USE_STL _CRT_SECURE_NO_WARNINGS)
-set(PROJECT_ALIAS_NAME ${PROJECT_NAME}3)
+set(PROJECT_ALIAS_NAME ${PROJECT_NAME})
 add_library(${PROJECT_ALIAS_NAME} SHARED ${SRC_FILES} ${HEAD_FILES} ${RESOURCE_FILE})
-target_link_libraries(${PROJECT_ALIAS_NAME} debug GfcSchemad optimized GfcSchema)
-target_link_libraries(${PROJECT_ALIAS_NAME} debug GfcEngined optimized GfcEngine)
+target_link_libraries(${PROJECT_ALIAS_NAME} debug GfcSchema31d optimized GfcSchema31)
+target_link_libraries(${PROJECT_ALIAS_NAME} debug GfcEngine31d optimized GfcEngine31)

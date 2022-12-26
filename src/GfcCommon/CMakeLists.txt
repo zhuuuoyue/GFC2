@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 2.9)
 
-set(PROJECT_NAME GfcCommon)
+set(PROJECT_NAME GfcCommon31)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/../include 

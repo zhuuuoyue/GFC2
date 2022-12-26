@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 2.9)
 
-set(PROJECT_NAME GfcEngine)
+set(PROJECT_NAME GfcEngine31)
 
 include_directories(
 	${PROJECT_SOURCE_DIR}/../include/Classes
@@ -8,7 +8,7 @@ include_directories(
 	${PROJECT_SOURCE_DIR}/GfcCommon
 	${PROJECT_SOURCE_DIR}/GfcSchema
 	${PROJECT_SOURCE_DIR}/../thirdparty/rapidjson 
-	${PROJECT_SOURCE_DIR}/${PROJECT_NAME}
+	${PROJECT_SOURCE_DIR}/GfcEngine
 )
 link_directories(${PROJECT_SOURCE_DIR}/../lib)
 
@@ -20,5 +20,5 @@ source_group(TREE ${PROJECT_SOURCE_DIR}/GfcEngine PREFIX "Source Files" FILES ${
 add_compile_definitions(_CRT_SECURE_NO_WARNINGS GFCENGINE_EXPORTS UNICODE)
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES} ${HEAD_FILES})
 
-target_link_libraries(${PROJECT_NAME} debug GfcSchemad optimized GfcSchema)
-target_link_libraries(${PROJECT_NAME} debug GfcCommond optimized GfcCommon)
+target_link_libraries(${PROJECT_NAME} debug GfcSchema31d optimized GfcSchema31)
+target_link_libraries(${PROJECT_NAME} debug GfcCommon31d optimized GfcCommon31)

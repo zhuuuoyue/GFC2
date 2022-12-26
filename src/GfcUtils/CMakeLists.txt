@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 2.9)
 
-set(PROJECT_NAME GfcUtils)
+set(PROJECT_NAME GfcUtils31)
 
 if(NOT DEFINED ENV{GGPDIR})
     message(FATAL_ERROR "not defined environment variable:GGPDIR")  
@@ -13,7 +13,7 @@ include_directories(
 	$ENV{GGPDIR}/include
 )
 
-file(GLOB HEAD_FILES "${PROJECT_SOURCE_DIR}/../include/${PROJECT_NAME}/*.h" "./*.h") 
+file(GLOB HEAD_FILES "${PROJECT_SOURCE_DIR}/../include/GfcUtils/*.h" "./*.h") 
 aux_source_directory(. SRC_FILES)
 #编译选项
 add_compile_definitions(UNICODE)
