@@ -29,5 +29,5 @@ add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEAD_FILES})
 #set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX d)
 
 target_link_libraries(${PROJECT_NAME} debug tinyxmld optimized tinyxml)
-target_link_libraries(${PROJECT_NAME} debug GfcSchemad optimized GfcSchema)
-target_link_libraries(${PROJECT_NAME} debug GfcCommond optimized GfcCommon)
+target_link_libraries(${PROJECT_NAME} debug GfcSchema31d optimized GfcSchema31)
+target_link_libraries(${PROJECT_NAME} debug GfcCommon31d optimized GfcCommon31)
